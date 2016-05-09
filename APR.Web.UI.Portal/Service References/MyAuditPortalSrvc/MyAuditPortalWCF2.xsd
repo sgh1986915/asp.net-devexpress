@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAprClientPortalInvoicesTbl">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AprClientPortalInvoicesTbl" nillable="true" type="tns:AprClientPortalInvoicesTbl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAprClientPortalInvoicesTbl" nillable="true" type="tns:ArrayOfAprClientPortalInvoicesTbl" />
+  <xs:complexType name="AprClientPortalInvoicesTbl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action_x0020_Dte" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Action_x0020_Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Action_x0020_Required" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="After_x0020_Pay_x0020_ID" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Approval_x0020_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attachments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Aud_x0020_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Aud_x0020_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Balance" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Billed_x0020_Amt" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Econ_x0020_Benefit_x0020_Dte" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Inv_x0020_Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Inv_x0020_Dte" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Inv_x0020_Num" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pay_x0020_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rcvd_x0020_RF" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Recovery_x0020_Amt" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Service_x0020_Line" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor_x0020_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor_x0020_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AprClientPortalInvoicesTbl" nillable="true" type="tns:AprClientPortalInvoicesTbl" />
+  <xs:complexType name="ArrayOfAprClientPortalClaimsTbl">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AprClientPortalClaimsTbl" nillable="true" type="tns:AprClientPortalClaimsTbl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAprClientPortalClaimsTbl" nillable="true" type="tns:ArrayOfAprClientPortalClaimsTbl" />
+  <xs:complexType name="AprClientPortalClaimsTbl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Billed_x0020_Amt" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CR_x0020_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Claim_x0020_Amt" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Claim_x0020_Approval" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Claim_x0020_Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Claim_x0020_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Claim_x0020_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Inv_x0020_Dte" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Inv_x0020_Num" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reference_x0020_Dte" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Reference_x0020_Num" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Root_x0020_Cause" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="System_x0020_Origin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_x0020_Def_x0020_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_x0020_Def_x0020_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor_x0020_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor_x0020_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AprClientPortalClaimsTbl" nillable="true" type="tns:AprClientPortalClaimsTbl" />
+  <xs:complexType name="ArrayOfAudit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Audit" nillable="true" type="tns:Audit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAudit" nillable="true" type="tns:ArrayOfAudit" />
+  <xs:complexType name="Audit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuditID" type="xs:int" />
+      <xs:element minOccurs="0" name="AuditName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Audit" nillable="true" type="tns:Audit" />
+  <xs:complexType name="AprAuthenticatedUser">
+    <xs:sequence>
+      <xs:element name="_x003C_AdDomain_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CustomersFullName_x003E_k__BackingField" nillable="true" type="tns:ArrayOfUserAuditCustName" />
+      <xs:element name="_x003C_Email_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_FirstName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Groups_x003E_k__BackingField" nillable="true" type="tns:ArrayOfUserGroup" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_LastName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_OrganizationalUnit_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_UserName_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AprAuthenticatedUser" nillable="true" type="tns:AprAuthenticatedUser" />
+  <xs:complexType name="ArrayOfUserAuditCustName">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserAuditCustName" nillable="true" type="tns:UserAuditCustName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserAuditCustName" nillable="true" type="tns:ArrayOfUserAuditCustName" />
+  <xs:complexType name="UserAuditCustName">
+    <xs:sequence>
+      <xs:element name="_x003C_AuditCustNameI_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_AuditCustName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Comments_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserAuditCustName" nillable="true" type="tns:UserAuditCustName" />
+  <xs:complexType name="ArrayOfUserGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserGroup" nillable="true" type="tns:UserGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserGroup" nillable="true" type="tns:ArrayOfUserGroup" />
+  <xs:complexType name="UserGroup">
+    <xs:sequence>
+      <xs:element name="_x003C_Comments_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_GroupId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Group_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserGroup" nillable="true" type="tns:UserGroup" />
+  <xs:complexType name="AprToDbPortalClaims">
+    <xs:sequence>
+      <xs:element name="_x003C_AuditName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ClaimApproval_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ClaimId_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Comment_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_InvNum_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IsInternal_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_LastUpdatedUser_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AprToDbPortalClaims" nillable="true" type="tns:AprToDbPortalClaims" />
+  <xs:complexType name="AprToDbPortalInvoices">
+    <xs:sequence>
+      <xs:element name="_x003C_ApprovaStatus_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AttachmentFileName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AuditName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EconBenefitDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_InvComments_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_InvNum_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LastUpdatedUser_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PayId_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_RcvdRf_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AprToDbPortalInvoices" nillable="true" type="tns:AprToDbPortalInvoices" />
+</xs:schema>

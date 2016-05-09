@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GridViewRibbon.ascx.cs" Inherits="APR.Web.UI.Portal.Controls.Usercontrols.GridViewRibbon" %>
+<dx:ASPxNavBar ID="gridRbbnNavBar" runat="server"></dx:ASPxNavBar>

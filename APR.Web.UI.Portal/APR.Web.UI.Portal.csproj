@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1351E081-EF58-4E71-B130-2B7FEE67E0BE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APR.Web.UI.Portal</RootNamespace>
+    <AssemblyName>APR.Web.UI.Portal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="App_Licenses">
+      <HintPath>..\Licenses\App_Licenses.dll</HintPath>
+    </Reference>
+    <Reference Include="APR.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependent_DLLs\APR.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="APR.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependent_DLLs\APR.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="BLToolkit.4">
+      <HintPath>..\Dependent_DLLs\BLToolkit.4.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.BonusSkins.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.CodeParser.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.Data.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.2.Core">
+      <HintPath>..\Dependent_DLLs\DevExpress.Printing.v12.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.Utils.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2.UI">
+      <HintPath>..\Dependent_DLLs\DevExpress.Utils.v12.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.Web.ASPxPivotGrid.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.Web.ASPxThemes.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.Web.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.Xpo.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v12.2.Web">
+      <HintPath>..\Dependent_DLLs\DevExpress.Xpo.v12.2.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.XtraGrid.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.2">
+      <HintPath>..\Dependent_DLLs\DevExpress.XtraPrinting.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\Dependent_DLLs\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.4.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependent_DLLs\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Web.Optimization.0.1\lib\net40\Microsoft.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ForgotPassword.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="App_Data\allegheny12\APPY13X4_eula.486703510.png" />
+    <Content Include="App_Data\allegheny12\Portal\Claims\APPY13X4_eula.1028.txt" />
+    <Content Include="App_Data\allegheny12\Portal\Claims\APPY13X4_eula.1031.txt" />
+    <Content Include="App_Data\allegheny12\Portal\Claims\APPY13X4_eula.1033.txt" />
+    <Content Include="App_Data\allegheny12\Portal\Claims\APPY13X4_eula.571734332.PNG" />
+    <Content Include="Controls\Usercontrols\AprBottomNavigation.ascx" />
+    <Content Include="Controls\Usercontrols\AprTopNavigation.ascx" />
+    <Content Include="Controls\Usercontrols\AprUploadControl.ascx" />
+    <Content Include="Controls\Usercontrols\GridViewRibbon.ascx" />
+    <Content Include="css\1200.css" />
+    <Content Include="css\1200.min.css" />
+    <Content Include="css\1560.css" />
+    <Content Include="css\1560.min.css" />
+    <Content Include="css\1920.css" />
+    <Content Include="css\1920.min.css" />
+    <Content Include="css\2520.css" />
+    <Content Include="css\2520.min.css" />
+    <Content Include="css\720.css" />
+    <Content Include="css\720.min.css" />
+    <Content Include="css\960.css" />
+    <Content Include="css\960.min.css" />
+    <Content Include="css\Custom\master.css" />
+    <Content Include="css\master.min.css" />
+    <Content Include="css\oldmaster.css" />
+    <Content Include="css\mobile.css" />
+    <Content Include="css\mobile.min.css" />
+    <Content Include="css\Custom\reset.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\Custom\text.css" />
+    <Content Include="css\themes\base\images\animated-overlay.gif" />
+    <Content Include="css\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\themes\base\jquery-ui.css" />
+    <Content Include="css\themes\base\jquery.ui.accordion.css" />
+    <Content Include="css\themes\base\jquery.ui.all.css" />
+    <Content Include="css\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="css\themes\base\jquery.ui.base.css" />
+    <Content Include="css\themes\base\jquery.ui.button.css" />
+    <Content Include="css\themes\base\jquery.ui.core.css" />
+    <Content Include="css\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="css\themes\base\jquery.ui.dialog.css" />
+    <Content Include="css\themes\base\jquery.ui.menu.css" />
+    <Content Include="css\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="css\themes\base\jquery.ui.resizable.css" />
+    <Content Include="css\themes\base\jquery.ui.selectable.css" />
+    <Content Include="css\themes\base\jquery.ui.slider.css" />
+    <Content Include="css\themes\base\jquery.ui.spinner.css" />
+    <Content Include="css\themes\base\jquery.ui.tabs.css" />
+    <Content Include="css\themes\base\jquery.ui.theme.css" />
+    <Content Include="css\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="css\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="css\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="css\themes\redmond\images\animated-overlay.gif" />
+    <Content Include="css\themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="css\themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="css\themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="css\themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="css\themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="css\themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="css\themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="css\themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="css\themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="css\themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="css\themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="css\themes\redmond\jquery-ui.css" />
+    <Content Include="css\themes\redmond\jquery.ui.accordion.css" />
+    <Content Include="css\themes\redmond\jquery.ui.all.css" />
+    <Content Include="css\themes\redmond\jquery.ui.autocomplete.css" />
+    <Content Include="css\themes\redmond\jquery.ui.base.css" />
+    <Content Include="css\themes\redmond\jquery.ui.button.css" />
+    <Content Include="css\themes\redmond\jquery.ui.core.css" />
+    <Content Include="css\themes\redmond\jquery.ui.datepicker.css" />
+    <Content Include="css\themes\redmond\jquery.ui.dialog.css" />
+    <Content Include="css\themes\redmond\jquery.ui.menu.css" />
+    <Content Include="css\themes\redmond\jquery.ui.progressbar.css" />
+    <Content Include="css\themes\redmond\jquery.ui.resizable.css" />
+    <Content Include="css\themes\redmond\jquery.ui.selectable.css" />
+    <Content Include="css\themes\redmond\jquery.ui.slider.css" />
+    <Content Include="css\themes\redmond\jquery.ui.spinner.css" />
+    <Content Include="css\themes\redmond\jquery.ui.tabs.css" />
+    <Content Include="css\themes\redmond\jquery.ui.theme.css" />
+    <Content Include="css\themes\redmond\jquery.ui.tooltip.css" />
+    <Content Include="css\themes\redmond\minified\images\animated-overlay.gif" />
+    <Content Include="css\themes\redmond\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="css\themes\redmond\minified\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="css\themes\redmond\minified\jquery-ui.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.button.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.core.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.menu.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.spinner.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\themes\redmond\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="css\ui.selectmenu.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\arro_img.png" />
+    <Content Include="images\bg_img.jpg" />
+    <Content Include="images\blue_bg.jpg" />
+    <Content Include="images\bottom_bg.jpg" />
+    <Content Include="images\bottom_logo.png" />
+    <Content Include="images\btndelete.png" />
+    <Content Include="images\footer_bg.jpg" />
+    <Content Include="images\frame_img.png" />
+    <Content Include="images\h1.png" />
+    <Content Include="images\input_img.jpg" />
+    <Content Include="images\link_bg.png" />
+    <Content Include="images\login_img.png" />
+    <Content Include="images\logo_img.png" />
+    <Content Include="images\mail_attachment.ico" />
+    <Content Include="images\Printer.ico" />
+    <Content Include="images\registration_img.png" />
+    <Content Include="images\save.png" />
+    <Content Include="images\submit.png" />
+    <Content Include="images\submit_img.png" />
+    <Content Include="images\trans_bg.png" />
+    <Content Include="images\Upload.png" />
+    <Content Include="MyAudit\ExecutiveSummary.aspx" />
+    <Content Include="MyAudit\Uploader.aspx" />
+    <Content Include="MyAudit\Claims.aspx" />
+    <Content Include="plupload\js\i18n\cs.js" />
+    <Content Include="plupload\js\i18n\da.js" />
+    <Content Include="plupload\js\i18n\de.js" />
+    <Content Include="plupload\js\i18n\el.js" />
+    <Content Include="plupload\js\i18n\es.js" />
+    <Content Include="plupload\js\i18n\et.js" />
+    <Content Include="plupload\js\i18n\fa.js" />
+    <Content Include="plupload\js\i18n\fi.js" />
+    <Content Include="plupload\js\i18n\fr-ca.js" />
+    <Content Include="plupload\js\i18n\fr.js" />
+    <Content Include="plupload\js\i18n\hr.js" />
+    <Content Include="plupload\js\i18n\hu.js" />
+    <Content Include="plupload\js\i18n\it.js" />
+    <Content Include="plupload\js\i18n\ja.js" />
+    <Content Include="plupload\js\i18n\ko.js" />
+    <Content Include="plupload\js\i18n\lv.js" />
+    <Content Include="plupload\js\i18n\nl.js" />
+    <Content Include="plupload\js\i18n\pl.js" />
+    <Content Include="plupload\js\i18n\pt-br.js" />
+    <Content Include="plupload\js\i18n\ro.js" />
+    <Content Include="plupload\js\i18n\ru.js" />
+    <Content Include="plupload\js\i18n\sk.js" />
+    <Content Include="plupload\js\i18n\sr.js" />
+    <Content Include="plupload\js\i18n\sv.js" />
+    <Content Include="plupload\js\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="plupload\js\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="plupload\js\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="plupload\js\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="plupload\js\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="plupload\js\jquery.plupload.queue\img\done.gif" />
+    <Content Include="plupload\js\jquery.plupload.queue\img\error.gif" />
+    <Content Include="plupload\js\jquery.plupload.queue\img\throbber.gif" />
+    <Content Include="plupload\js\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="plupload\js\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="plupload\js\jquery.ui.plupload\css\jquery.ui.plupload.css" />
+    <Content Include="plupload\js\jquery.ui.plupload\img\plupload-bw.png" />
+    <Content Include="plupload\js\jquery.ui.plupload\img\plupload.png" />
+    <Content Include="plupload\js\jquery.ui.plupload\jquery.ui.plupload.js" />
+    <Content Include="plupload\js\plupload.browserplus.js" />
+    <Content Include="plupload\js\plupload.flash.js" />
+    <Content Include="plupload\js\plupload.flash.swf" />
+    <Content Include="plupload\js\plupload.full.js" />
+    <Content Include="plupload\js\plupload.gears.js" />
+    <Content Include="plupload\js\plupload.html4.js" />
+    <Content Include="plupload\js\plupload.html5.js" />
+    <Content Include="plupload\js\plupload.js" />
+    <Content Include="plupload\js\plupload.silverlight.js" />
+    <Content Include="plupload\js\plupload.silverlight.xap" />
+    <Content Include="scripts\adapt.js" />
+    <Content Include="scripts\adapt.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AprMaster.Master.cs">
+      <DependentUpon>AprMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AprMaster.Master.designer.cs">
+      <DependentUpon>AprMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Code\ClaimsColumns.cs" />
+    <Compile Include="Code\AuditColumns.cs" />
+    <Compile Include="Code\FileToProcess.cs" />
+    <Compile Include="Code\InvoiceColumns.cs" />
+    <Compile Include="Code\MergeFiles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\PdfMerger.cs" />
+    <Compile Include="Code\UI\Controls\AprASPxGridview.cs" />
+    <Compile Include="Code\UI\Controls\UploadControl.cs" />
+    <Compile Include="Code\UI\ITemplates\AttachmentHeaderCaptionTemplate.cs" />
+    <Compile Include="Code\UI\ITemplates\CellDataItemTemplate.cs" />
+    <Compile Include="Code\UI\ITemplates\HeaderCheckBox.cs" />
+    <Compile Include="Code\UI\ITemplates\GridFileAttachmentTemplate.cs" />
+    <Compile Include="Code\UI\ITemplates\HeaderDropdonwTitleTemplate.cs" />
+    <Compile Include="Code\UI\ITemplates\HeaderTitleTemplate .cs" />
+    <Compile Include="Code\UI\ITemplates\ReadOnlyTemplate.cs" />
+    <Compile Include="Code\UI\ITemplates\UploaderTemplate.cs" />
+    <Compile Include="Controls\Usercontrols\AprBottomNavigation.ascx.cs">
+      <DependentUpon>AprBottomNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Usercontrols\AprBottomNavigation.ascx.designer.cs">
+      <DependentUpon>AprBottomNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Usercontrols\AprTopNavigation.ascx.cs">
+      <DependentUpon>AprTopNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Usercontrols\AprTopNavigation.ascx.designer.cs">
+      <DependentUpon>AprTopNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Usercontrols\AprUploadControl.ascx.cs">
+      <DependentUpon>AprUploadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Usercontrols\AprUploadControl.ascx.designer.cs">
+      <DependentUpon>AprUploadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Usercontrols\GridViewRibbon.ascx.cs">
+      <DependentUpon>GridViewRibbon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Usercontrols\GridViewRibbon.ascx.designer.cs">
+      <DependentUpon>GridViewRibbon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAudit\ExecutiveSummary.aspx.cs">
+      <DependentUpon>ExecutiveSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAudit\ExecutiveSummary.aspx.designer.cs">
+      <DependentUpon>ExecutiveSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAudit\Uploader.aspx.cs">
+      <DependentUpon>Uploader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAudit\Uploader.aspx.designer.cs">
+      <DependentUpon>Uploader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintHandler.ashx.cs">
+      <DependentUpon>PrintHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MyAuditPortalSrvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UploadHandler.ashx.cs">
+      <DependentUpon>UploadHandler.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="css\grid.css" />
+    <Compile Include="Download.ashx.cs">
+      <DependentUpon>Download.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HttpHandler\AjaxFileUploader.ashx.cs">
+      <DependentUpon>AjaxFileUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAudit\Claims.aspx.designer.cs">
+      <DependentUpon>Claims.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalMaster.master.cs">
+      <DependentUpon>PortalMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalMaster.master.designer.cs">
+      <DependentUpon>PortalMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="MyAudit\Claims.aspx.cs">
+      <DependentUpon>Claims.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicMaster.master.cs">
+      <DependentUpon>PublicMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicMaster.master.designer.cs">
+      <DependentUpon>PublicMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptLoadMaster.Master.cs">
+      <DependentUpon>ScriptLoadMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScriptLoadMaster.Master.designer.cs">
+      <DependentUpon>ScriptLoadMaster.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\Thumbs.db" />
+    <Content Include="ScriptLoadMaster.Master" />
+    <Content Include="PublicMaster.master" />
+    <Content Include="PortalMaster.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\aspxClmGridView.xls" />
+    <Content Include="App_Data\aspxInvGridView.xls" />
+    <Content Include="HttpHandler\AjaxFileUploader.ashx" />
+    <Content Include="Properties\DataSources\APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.CRMImport.AprClientPortalClaimsTbl1.datasource" />
+    <Content Include="Properties\DataSources\APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.CRMImport.AprClientPortalInvoicesTbl1.datasource" />
+    <Content Include="Download.ashx" />
+    <Content Include="App_Data\allegheny12\Portal\Claims\APPY13X4_eula.1034.pdf" />
+    <Content Include="App_Data\allegheny12\Portal\Claims\APPY13X4_eula.1035.pdf" />
+    <Content Include="App_Data\allegheny12\Portal\Claims\APPY13X4_eula.1036.xls" />
+    <Content Include="App_Data\aspxExecutiveSummeryGridView.xls" />
+    <Content Include="PrintHandler.ashx" />
+    <Content Include="Properties\DataSources\APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal.AprClientPortalClaimsTbl.datasource" />
+    <Content Include="Properties\DataSources\APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal.AprClientPortalInvoicesTbl.datasource" />
+    <Content Include="Properties\DataSources\APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal.Audit.datasource" />
+    <Content Include="Properties\DataSources\APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal.AprAuthenticatedUser.datasource" />
+    <Content Include="Account\Web.config" />
+    <Content Include="MyAudit\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\APRMyPortal.pubxml" />
+    <Content Include="scripts\adapt.min.js.map">
+      <DependentUpon>adapt.js</DependentUpon>
+    </Content>
+    <Content Include="scripts\ajaxfileupload.js" />
+    <Content Include="scripts\ajaxupload.js" />
+    <Content Include="scripts\aprmaster.js" />
+    <Content Include="scripts\aprmaster.min.js" />
+    <Content Include="scripts\browserplus-min.js" />
+    <Content Include="scripts\html5shiv-printshiv.js" />
+    <Content Include="scripts\html5shiv.js" />
+    <Content Include="scripts\jquery-1.9.1.js" />
+    <Content Include="scripts\jquery-ui-1.10.2.custom.js" />
+    <Content Include="scripts\jquery-ui-1.10.2.custom.min.js" />
+    <Content Include="scripts\ui.selectmenu.js" />
+    <Content Include="scripts\jquery-migrate-1.1.1.min.js" />
+    <Content Include="scripts\jquery.alerts.js" />
+    <Content Include="scripts\modernizr.custom.15213.js" />
+    <Content Include="scripts\UploadPrint.js" />
+    <None Include="Properties\PublishProfiles\LocalAPRPortal.pubxml" />
+    <Content Include="scripts\aprmaster.min.js.map">
+      <DependentUpon>aprmaster.js</DependentUpon>
+    </Content>
+    <Content Include="Service References\MyAuditPortalSrvc\APR.Web.UI.Portal.MyAuditPortalSrvc.AprAuthenticatedUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MyAuditPortalSrvc\APR.Web.UI.Portal.MyAuditPortalSrvc.AprClientPortalClaimsTbl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MyAuditPortalSrvc\APR.Web.UI.Portal.MyAuditPortalSrvc.AprClientPortalInvoicesTbl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MyAuditPortalSrvc\APR.Web.UI.Portal.MyAuditPortalSrvc.Audit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\MyAuditPortalSrvc\MyAuditPortalWCF.disco" />
+    <None Include="Service References\MyAuditPortalSrvc\configuration91.svcinfo" />
+    <None Include="Service References\MyAuditPortalSrvc\configuration.svcinfo" />
+    <None Include="Service References\MyAuditPortalSrvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="UploadHandler.ashx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\MyAuditPortalSrvc\MyAuditPortalService.wsdl" />
+    <None Include="Properties\PublishProfiles\Portal Production Ikniq-webui-srv.ikniq.com.pubxml" />
+    <None Include="Service References\MyAuditPortalSrvc\MyAuditPortalWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MyAuditPortalSrvc\MyAuditPortalWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MyAuditPortalSrvc\MyAuditPortalWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AprMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MyAuditPortalSrvc\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12809</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54280/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/ScriptLoadMaster.Master" AutoEventWireup="true" CodeBehind="PortalMaster.master.cs" Inherits="APR.Web.UI.Portal.PortalMaster" %>
+
+<%@ Register Src="~/controls/usercontrols/AprTopNavigation.ascx" TagPrefix="aprtopNavUCtrl" TagName="AprTopNavigation" %>
+<%@ Register Src="~/controls/usercontrols/AprBottomNavigation.ascx" TagPrefix="aprbottomNavUCtrl" TagName="AprBottomNavigation" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="scriptLoadMain" runat="server">
+    <asp:ContentPlaceHolder ID="scriptLoadMain" runat="server">
+        <div class="container_12">
+            <div class="grid_12">
+                <aprtopnavuctrl:aprtopnavigation runat="server" id="AprTopNavigation" />
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="portalMain" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="grid_12">
+                <aprbottomnavuctrl:aprbottomnavigation runat="server" id="AprBottomNavigation" />
+            </div>
+        </div>
+    </asp:ContentPlaceHolder>
+</asp:Content>

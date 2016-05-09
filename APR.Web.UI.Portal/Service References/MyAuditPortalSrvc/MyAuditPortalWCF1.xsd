@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://apr-webdev-srvr.apauditcorp.com:8880/MyAuditPortalWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" />
+  <xs:element name="GetAprAuditInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auditName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAprAuditInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" minOccurs="0" name="GetAprAuditInvoicesResult" nillable="true" type="q1:ArrayOfAprClientPortalInvoicesTbl" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAprAuditClaims">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auditName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAprAuditClaimsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" minOccurs="0" name="GetAprAuditClaimsResult" nillable="true" type="q2:ArrayOfAprClientPortalClaimsTbl" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersAuditNamesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersAuditNamesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" minOccurs="0" name="GetUsersAuditNamesListResult" nillable="true" type="q3:ArrayOfAudit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoByUserName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" minOccurs="0" name="aprPortalUser" nillable="true" type="q4:AprAuthenticatedUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoByUserNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" minOccurs="0" name="GetUserInfoByUserNameResult" nillable="true" type="q5:AprAuthenticatedUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveClaimInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" minOccurs="0" name="claim" nillable="true" type="q6:AprToDbPortalClaims" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveClaimInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveClaimInfoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveClaimComments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" minOccurs="0" name="claim" nillable="true" type="q7:AprToDbPortalClaims" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveClaimCommentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveClaimCommentsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInvoiceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" minOccurs="0" name="invoice" nillable="true" type="q8:AprToDbPortalInvoices" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInvoiceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveInvoiceInfoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInvoiceComments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/APR.Common.Objects.Database.Mapping.Tables.APRSQLCuster.APRPortal" minOccurs="0" name="invoice" nillable="true" type="q9:AprToDbPortalInvoices" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInvoiceCommentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveInvoiceCommentsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cbfaf0d9-ea61-4255-9adf-1d1580c65d23" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://apr-webdev-srvr.apauditcorp.com:8880/MyAuditPortalWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MyAuditPortalWCF.xsd" MetadataType="Schema" ID="a3994ff1-6369-4160-8d86-ef90c489b019" SourceId="1" SourceUrl="http://apr-webdev-srvr.apauditcorp.com:8880/MyAuditPortalWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="MyAuditPortalWCF1.xsd" MetadataType="Schema" ID="0b684c54-bc0f-4831-af77-fbd28c942ca4" SourceId="1" SourceUrl="http://apr-webdev-srvr.apauditcorp.com:8880/MyAuditPortalWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="MyAuditPortalService.wsdl" MetadataType="Wsdl" ID="b3e7f5b5-bf9d-4f61-b54c-0c9b5bb28f7c" SourceId="1" SourceUrl="http://apr-webdev-srvr.apauditcorp.com:8880/MyAuditPortalWCF.svc?wsdl" />
+    <MetadataFile FileName="MyAuditPortalWCF.disco" MetadataType="Disco" ID="cc93e4cb-eeed-4d53-92f7-0e54249c52db" SourceId="1" SourceUrl="http://apr-webdev-srvr.apauditcorp.com:8880/MyAuditPortalWCF.svc?disco" />
+    <MetadataFile FileName="MyAuditPortalWCF2.xsd" MetadataType="Schema" ID="1ddb2f09-e28a-4797-ac6f-cdc2338b3e55" SourceId="1" SourceUrl="http://apr-webdev-srvr.apauditcorp.com:8880/MyAuditPortalWCF.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

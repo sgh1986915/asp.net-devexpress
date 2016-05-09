@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{3D70E929-D122-42B1-B072-8B66D90F1DD2}"
+	ProjectSection(SolutionItems) = preProject
+		Dependent_DLLs\BLToolkit.4.dll = Dependent_DLLs\BLToolkit.4.dll
+		Dependent_DLLs\DevExpress.BonusSkins.v12.2.dll = Dependent_DLLs\DevExpress.BonusSkins.v12.2.dll
+		Dependent_DLLs\DevExpress.CodeParser.v12.2.dll = Dependent_DLLs\DevExpress.CodeParser.v12.2.dll
+		Dependent_DLLs\DevExpress.Data.v12.2.dll = Dependent_DLLs\DevExpress.Data.v12.2.dll
+		Dependent_DLLs\DevExpress.Printing.v12.2.Core.dll = Dependent_DLLs\DevExpress.Printing.v12.2.Core.dll
+		Dependent_DLLs\DevExpress.Utils.v12.2.dll = Dependent_DLLs\DevExpress.Utils.v12.2.dll
+		Dependent_DLLs\DevExpress.Utils.v12.2.UI.dll = Dependent_DLLs\DevExpress.Utils.v12.2.UI.dll
+		Dependent_DLLs\DevExpress.Web.ASPxPivotGrid.v12.2.dll = Dependent_DLLs\DevExpress.Web.ASPxPivotGrid.v12.2.dll
+		Dependent_DLLs\DevExpress.Web.ASPxThemes.v12.2.dll = Dependent_DLLs\DevExpress.Web.ASPxThemes.v12.2.dll
+		Dependent_DLLs\DevExpress.Web.v12.2.dll = Dependent_DLLs\DevExpress.Web.v12.2.dll
+		Dependent_DLLs\DevExpress.Xpo.v12.2.dll = Dependent_DLLs\DevExpress.Xpo.v12.2.dll
+		Dependent_DLLs\DevExpress.Xpo.v12.2.Web.dll = Dependent_DLLs\DevExpress.Xpo.v12.2.Web.dll
+		Dependent_DLLs\DevExpress.XtraGrid.v12.2.dll = Dependent_DLLs\DevExpress.XtraGrid.v12.2.dll
+		Dependent_DLLs\DevExpress.XtraPrinting.v12.2.dll = Dependent_DLLs\DevExpress.XtraPrinting.v12.2.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APR.Web.UI.Portal", "APR.Web.UI.Portal\APR.Web.UI.Portal.csproj", "{1351E081-EF58-4E71-B130-2B7FEE67E0BE}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://aprteamfoundationserver.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = APR.Web.UI.Portal\\APR.Web.UI.Portal.csproj
+		SccProjectName1 = APR.Web.UI.Portal
+		SccLocalPath1 = APR.Web.UI.Portal
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1351E081-EF58-4E71-B130-2B7FEE67E0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1351E081-EF58-4E71-B130-2B7FEE67E0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1351E081-EF58-4E71-B130-2B7FEE67E0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1351E081-EF58-4E71-B130-2B7FEE67E0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
